@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Cuisines & Top Restaurants</h2>
+
+<div>
+    {{ cuisine_chart | safe }}
+</div>
+
+<h3>Top Rated Restaurants</h3>
+{{ tables | safe }}
+{% endblock %}

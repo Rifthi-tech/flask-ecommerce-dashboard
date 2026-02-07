@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>City & Rating Analysis</h2>
+
+<div>
+    {{ city_chart | safe }}
+</div>
+
+<div>
+    {{ rating_chart | safe }}
+</div>
+{% endblock %}
