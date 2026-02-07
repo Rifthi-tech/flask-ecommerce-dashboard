@@ -1,13 +1,68 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>🍽 Restaurant Analytics Dashboard</h2>
-<p>This dashboard is generated from a real restaurant dataset.</p>
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Restaurant Analytics Dashboard</h1>
+        <p class="hero-subtitle">Explore dining insights from real restaurant data</p>
+    </div>
+</div>
 
-<ul>
-    <li>City-wise restaurant distribution</li>
-    <li>Average ratings by city</li>
-    <li>Top cuisines</li>
-    <li>Top-rated restaurants</li>
-</ul>
+<div class="container">
+    <section class="features-section">
+        <h2 class="section-title">Dashboard Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon city-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>City Distribution</h3>
+                <p>Analyze restaurants across different cities and regions</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon rating-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Ratings Analysis</h3>
+                <p>Average ratings and customer satisfaction by city</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon cuisine-icon">
+                    <i class="fas fa-pepper-hot"></i>
+                </div>
+                <h3>Top Cuisines</h3>
+                <p>Discover the most popular cuisines in the market</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon restaurant-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3>Top Restaurants</h3>
+                <p>See the highest-rated restaurants in detail</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <h2 class="section-title">Quick Stats</h2>
+        <div class="stats-grid">
+            <div class="stat-card primary">
+                <h4>Total Restaurants</h4>
+                <p class="stat-number">5000+</p>
+            </div>
+            <div class="stat-card success">
+                <h4>Active Cities</h4>
+                <p class="stat-number">20+</p>
+            </div>
+            <div class="stat-card warning">
+                <h4>Avg Rating</h4>
+                <p class="stat-number">4.2★</p>
+            </div>
+            <div class="stat-card info">
+                <h4>Cuisines</h4>
+                <p class="stat-number">100+</p>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}

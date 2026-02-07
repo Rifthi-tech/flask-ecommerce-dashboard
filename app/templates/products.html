@@ -1,12 +1,34 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Cuisines & Top Restaurants</h2>
-
-<div>
-    {{ cuisine_chart | safe }}
+<div class="header-section">
+    <h2 class="page-title"><i class="fas fa-utensils"></i> Cuisines & Top Restaurants</h2>
+    <p class="page-subtitle">Discover the most popular cuisines and top-rated restaurants</p>
 </div>
 
-<h3>Top Rated Restaurants</h3>
-{{ tables | safe }}
+<div class="container">
+    <section class="chart-section">
+        <div class="chart-card">
+            <div class="chart-header">
+                <h3><i class="fas fa-chart-pie"></i> Popular Cuisines</h3>
+                <span class="chart-badge">Distribution</span>
+            </div>
+            <div class="chart-body">
+                {{ cuisine_chart | safe }}
+            </div>
+        </div>
+    </section>
+
+    <section class="table-section">
+        <div class="table-card">
+            <div class="table-header">
+                <h3><i class="fas fa-crown"></i> Top Rated Restaurants</h3>
+                <span class="table-badge">Excellence</span>
+            </div>
+            <div class="table-body">
+                {{ tables | safe }}
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}

@@ -1,13 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>City & Rating Analysis</h2>
-
-<div>
-    {{ city_chart | safe }}
+<div class="header-section">
+    <h2 class="page-title"><i class="fas fa-chart-pie"></i> City & Rating Analysis</h2>
+    <p class="page-subtitle">Explore restaurants and ratings across different cities</p>
 </div>
 
-<div>
-    {{ rating_chart | safe }}
+<div class="container">
+    <div class="charts-grid">
+        <section class="chart-section">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fas fa-map-marker-alt"></i> City Distribution</h3>
+                    <span class="chart-badge">Geographic</span>
+                </div>
+                <div class="chart-body">
+                    {{ city_chart | safe }}
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fas fa-star"></i> Rating Analysis</h3>
+                    <span class="chart-badge">Performance</span>
+                </div>
+                <div class="chart-body">
+                    {{ rating_chart | safe }}
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
 {% endblock %}
